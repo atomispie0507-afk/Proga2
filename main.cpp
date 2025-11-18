@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-int** funk1(int arr[M][M], int n);
+int** funk1(int arr, int n);
 
-int funk2(int **arr[M][M], int n);
+int funk2(int **arr, int n);
 
-int funk3(int **arr[M][M], int n);
+int funk3(int **arr, int n);
 
 int main() 
 {
@@ -50,7 +50,7 @@ int main()
 
 	return 0;
 }
-int funk1(int arr[M][M], int n)
+int **funk1(int arr, int n)
 {
 	int i, j;
 	int** arr = (int**)malloc(n * sizeof(int*));
@@ -66,7 +66,7 @@ int funk1(int arr[M][M], int n)
 	}
 	return 0;
 }
-int funk2(int **arr[M][M], int n)
+int funk2(int **arr, int n)
 {
 	int i, j;
 	int found_zeros = 0;
@@ -95,7 +95,7 @@ int funk2(int **arr[M][M], int n)
 	printf("\n");
 	return 0;
 }
-int funk3(int **arr[M][M], int n)
+int funk3(int **arr, int n)
 {
 	int i, j;
 	int found_even = 0;
